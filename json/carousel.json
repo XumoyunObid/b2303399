@@ -1,0 +1,11 @@
+[
+    { "src": "../images/img1.jpg", "info": "Image 1 Description" },
+    { "src": "../images/img2.jpg", "info": "Image 2 Description" },
+    { "src": "../images/img3.jpg", "info": "Image 3 Description" },
+    { "src": "../images/img4.jpg", "info": "Image 4 Description" },
+    { "src": "../images/img5.jpg", "info": "Image 5 Description" },
+    { "src": "../images/img6.jpg", "info": "Image 6 Description" },
+    { "src": "../images/img7.jpg", "info": "Image 7 Description" },
+    { "src": "../images/img8.jpg", "info": "Image 8 Description" },
+    { "src": "../images/img9.jpg", "info": "Image 9 Description" }
+  ]

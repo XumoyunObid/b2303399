@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bahodirova Sarvinoz Personal Web-page</title>
+  <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+            padding: 0;
+        }
+
+    .contact-section {
+        width: 90%;
+        max-width: 450px;
+        background: linear-gradient(135deg, #fddde6, #d9eafa);
+        border-radius: 20px;
+        margin: 80px auto;
+        padding: 50px 30px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .contact-section h1 {
+        margin-bottom: 10px;
+        color: #333;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .contact-section h2 {
+        color: #555;
+        font-size: 24px;
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .contact-section .emoji {
+        font-size: 30px;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        width: 100%;
+        max-width: 350px;
+        padding: 14px 18px;
+        font-size: 16px;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+        border: 2px solid #aad8eb;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        background-color: #fff;
+        color: #333;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        border-color: #88cde5;
+        outline: none;
+        box-shadow: 0 0 15px rgba(170, 216, 235, 0.4);
+    }
+
+    .contact-form textarea {
+        resize: vertical;
+        min-height: 120px;
+        max-height: 300px;
+    }
+
+    .contact-form button {
+        background-color: #aad8eb;
+        color: #fff;
+        border: none;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(170, 216, 235, 0.5);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .contact-form button:hover {
+        background-color: #88cde5;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(170, 216, 235, 0.7);
+    }
+
+    .direct-email-contact {
+        margin-top: 25px;
+    }
+
+    .direct-email-contact a {
+        color: #5d3a58;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+    .direct-email-contact a:hover {
+        text-decoration: underline;
+    }
+
+    .bottom-text {
+        text-align: center;
+        margin: 40px 0;
+        font-size: 14px;
+        color: #999;
+    }
+
+    /* Spinner */
+    .spinner {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        border-top-color: #aad8eb;
+        animation: spin 1s linear infinite;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item me-3">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="about.html">About Me</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="hobbies.html">Hobbies</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</header>
+
+<main>
+    <div class="contact-section">
+    <h1>Contact Details</h1>
+    <h2><span class="emoji">💌</span>Get in Touch</h2>
+    <form class="contact-form" id="contactForm">
+        <input class="name-input" type="text" name="name" placeholder="Write Your Name:" required>
+        <input class="email-input" type="email" name="email" placeholder="Write Your Email:" required>
+        <textarea class="textarea-input" name="message" placeholder="Write Your Text Message:" required></textarea>
+        <button type="submit" id="submitButton">Contact With Me</button>
+    </form>
+    <p class="direct-email-contact">
+        <a href="mailto:sarvinoz2005@gmail.com">sarvinoz20058@gmail.com</a>
+        </p>
+    </div>
+</main>
+
+<div class="bottom-text" style="text-align: center; margin-top: 20px; font-size: 14px; color: black;">
+    © 2025 Website of Sarvinoz B2303399 | All Rights Reserved.
+</div>
+
+<script>
+    const contactForm = document.getElementById('contactForm');
+    const submitButton = document.getElementById('submitButton');
+
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+    submitButton.innerHTML = '<span class="spinner"></span> Sending...';
+    submitButton.disabled = true;
+
+    setTimeout(() => {
+        submitButton.innerHTML = 'Message Sent! ✅';
+        setTimeout(() => {
+            submitButton.innerHTML = 'Contact With Me';
+            submitButton.disabled = false;
+            contactForm.reset();
+        }, 2000);
+      }, 2000);
+    });
+</script>
+</body>
+</html>
